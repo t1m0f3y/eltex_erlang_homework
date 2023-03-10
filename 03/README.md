@@ -2,7 +2,7 @@
 
 ## Задание 1
 
-``
+```
 {ok,converter}
 2> converter:to_rub({usd, 100}).
 Convert usd to rub, amount 100
@@ -17,7 +17,7 @@ yene - convert is not supported
 -15 - number is less than 0
 {error,badarg}
 6> 
-``
+```
 
 ### комментарии 
 
