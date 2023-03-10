@@ -5,7 +5,6 @@
 ## to_rub
 
 ```
-{ok,converter}
 2> converter:to_rub({usd, 100}).
 Convert usd to rub, amount 100
 {ok,7550.0}
