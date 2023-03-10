@@ -28,3 +28,35 @@ yene - convert is not supported
 4 - конвертация 30 yene в rub прошла с ошибкой; конвертация из yene не поддерживается
 
 5 - конвертация -15 euro в rub прошла с ошибкой; -15 меньше 0 (нуля)
+
+## Задание 2
+
+```
+8> converter:to_rub2({usd, 100}).
+Convert usd to rub, amount 100
+Result {ok,7550.0}
+{ok,7550.0}
+9> converter:to_rub2({peso, 12}).
+Convert usd to rub, amount 12
+Result {ok,36}
+{ok,36}
+10> converter:to_rub2({yene, 30}).
+yene - convert is not supported
+Result {error,badarg}
+{error,badarg}
+11> converter:to_rub2({euro, -15}).
+-15 - number is less than 0
+Result {error,badarg}
+{error,badarg}
+12> 
+```
+
+### комментарии 
+
+2 - конвертация 100 usd в rub прошла успешно
+
+3 - конвертация 12 peso в rub прошла успешно
+
+4 - конвертация 30 yene в rub прошла с ошибкой; конвертация из yene не поддерживается
+
+5 - конвертация -15 euro в rub прошла с ошибкой; -15 меньше 0 (нуля)
