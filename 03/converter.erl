@@ -37,7 +37,7 @@ to_rub({_, Amount}) when not(Amount > 0) ->
 	io:format("~p - number is less than 0~n", [Amount]),
 	{error, badarg};
 
-to_rub({Wrong, Amount}) when is_integer(Amount), Amount > 0 ->
+to_rub({Wrong, _}) ->
 	io:format("~p - convert is not supported~n", [Wrong]),
 	{error, badarg};
 
@@ -75,7 +75,7 @@ to_rub2(Arg) ->
 			{_, Amount} when not(Amount > 0) ->
 				io:format("~p - number is less than 0~n", [Amount]),
 				{error, badarg};
-			{Wrong, Amount} when is_integer(Amount), Amount > 0 ->		
+			{Wrong, _} ->		
 				io:format("~p - convert is not supported~n", [Wrong]),
 				{error, badarg};
 			Error ->		
@@ -114,7 +114,7 @@ to_rub3(Arg) ->
 		{_, Amount} when not(Amount > 0) ->
 			io:format("~p - number is less than 0~n", [Amount]),
 			{error, badarg};
-		{Wrong, Amount} when is_integer(Amount), Amount > 0 ->		
+		{Wrong, _} ->		
 			io:format("~p - convert is not supported~n", [Wrong]),
 			{error, badarg};
 		Error ->		
